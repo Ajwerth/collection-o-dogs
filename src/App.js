@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from './components/Header';
-import Collection from './components/Collection';
 import Search from './components/Search';
+import List from './components/List';
+import Collection from './components/Collection';
+import Card from './components/Card'
 import './App.css';
 
 function App() {
@@ -9,7 +11,10 @@ function App() {
     <div className="App">
       <Header />
       <Search />
-      <Collection />
+      <List />
+      <Collection>
+        <Card/>
+      </Collection>
     </div>
   );
 }

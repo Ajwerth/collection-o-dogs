@@ -8,18 +8,33 @@ const SearchContainer = styled.div`
 
         .field{
             font-size: 1rem;
+
+            label{
+                font-weight: 700;
+            }
+
             input{
-                padding: 6px;
+                padding: 7px;
+                border: 2px solid;
+                border-radius: 4px;
             }
         }
         
         #submit{
             background: #693db1;
+            border: 2px solid #693db1;
             color: #fff;
             padding: 5px 10px;
             font-size: 1rem;
-            border: 1px;
+            border-radius: 4px;
             margin-left: 5px;
+
+            &:hover{
+                background: #fff;
+                color: #693db1;
+                border: 2px solid #693db1;
+                cursor: pointer;
+            }
         }
     }
 `

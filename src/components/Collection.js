@@ -1,18 +1,23 @@
 import React from 'react';
 import styled from "styled-components";
-import Card from "./Card";
 
 const CollectionContainer = styled.div`
   display: flex;
   margin-top: 2rem;
+
+  h2{
+    border-bottom: 2px solid #000;
+  }
 `
 
-function Collection() {
+function Collection(props) {
   return (
-    <CollectionContainer>
-      <Card />
-      <Card />
-    </CollectionContainer>
+    <>
+      <h2>Your Collection</h2>
+      <CollectionContainer>
+      {props.children}
+      </CollectionContainer>
+    </>
   );
 }
 

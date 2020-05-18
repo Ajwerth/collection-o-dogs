@@ -13,13 +13,15 @@ const HeaderContainer = styled.header`
   h1{
     margin-left: 20px;
   }
+
+  margin-bottom: 20px;
 `
 
 function Header() {
   return (
     <HeaderContainer>
         <img src={logo} className="Dog-logo" alt="logo" />
-        <h1> Collection o' Dogs</h1>
+        <h1> Collection O' Dogs</h1>
     </HeaderContainer>
   );
 }

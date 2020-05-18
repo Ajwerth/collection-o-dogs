@@ -9,7 +9,7 @@ const CardContainer = styled.div`
     padding: 5px 15px;
     box-shadow: 3px 3px #222;
     max-width: 200px;
-    margin: 20px;
+    margin-right: 20px;
     background-color: #8459ca;
     color: #fff;
 `
