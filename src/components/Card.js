@@ -8,9 +8,10 @@ const CardContainer = styled.div`
     border-radius: 4px;
     padding: 5px 15px;
     box-shadow: 3px 3px #222;
-    background-color: #e0e0e0;
     max-width: 200px;
     margin: 20px;
+    background-color: #8459ca;
+    color: #fff;
 `
 
 function Card() {

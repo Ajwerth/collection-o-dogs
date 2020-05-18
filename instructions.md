@@ -17,4 +17,4 @@ The page should allow the user to
 - Use React.js or Vanilla Javascript to complete the assignment
 - We expect this to take about 3 hours, but bear in mind that finished is better than partly-finished.
 - Provide instructions for running the project
-- Add you project to github and send us the link to the repo
+- Add your project to github and send us the link to the repo
