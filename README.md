@@ -1,6 +1,6 @@
 I bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-To run the app simply run 'npm start' fromn the collection-o-dogs directory.
+To run the app simply run `npm start` from the collection-o-dogs directory.
 
 ## Thought process
 
@@ -17,3 +17,5 @@ I would also creat a delete button on breeds that have been added to the collect
 Some of the custom hooks and state management got a little hairy during this initial process (there was more state that needed handling that I thought there would be), I would definitely go in and clean those things up and try to make it a little more organized. Add in a store to hold all of state, that can be accessed easily throughout the app.
 
 I also would love to add in some unit tests, to make sure that when the add to collection button is pressed it actually adds an element to the collection and maybe test to make sure that it can't add duplicates.
+
+Lastly I would clean up some of the UI elements and make them more visually appealing.
