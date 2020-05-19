@@ -10,15 +10,37 @@
     url(./fonts/Poppins-Bold.woff2) format("woff");
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins-Bold", sans-serif;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
 }
 
-.App{
+.App {
   margin: 5%;
+}
+
+button {
+  background: #693db1;
+  border: 2px solid #693db1;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+button:hover {
+  background: #fff;
+  color: #693db1;
+  border: 2px solid #693db1;
+  cursor: pointer;
 }

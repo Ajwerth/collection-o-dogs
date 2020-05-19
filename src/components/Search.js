@@ -1,56 +1,44 @@
-import React from 'react';
+import React from "react";
+import { useForm } from "../customHooks";
 import styled from "styled-components";
 
 const SearchContainer = styled.div`
-    form{
-        display: flex;
-        align-items: center; 
+  form {
+    display: flex;
+    align-items: center;
 
-        .field{
-            font-size: 1rem;
+    .field {
+      font-size: 1rem;
 
-            label{
-                font-weight: 700;
-            }
+      label {
+        font-weight: 700;
+      }
 
-            input{
-                padding: 7px;
-                border: 2px solid;
-                border-radius: 4px;
-            }
-        }
-        
-        #submit{
-            background: #693db1;
-            border: 2px solid #693db1;
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 1rem;
-            border-radius: 4px;
-            margin-left: 5px;
-
-            &:hover{
-                background: #fff;
-                color: #693db1;
-                border: 2px solid #693db1;
-                cursor: pointer;
-            }
-        }
+      input {
+        padding: 7px;
+        border: 2px solid;
+        border-radius: 4px;
+      }
     }
-`
+  }
+`;
 
-function Search() {
+function Search(props) {
+  const { handleChange, handleSubmit } = props;
   return (
     <SearchContainer>
-        <form action="" method="get" class="form-example">
-            <div class="field">
-                <label for="name">Search Breeds: </label>
-                <input type="text" name="name" id="name" required />
-            </div>
-              <div class="button">
-                <input type="submit" value="Search" id="submit"/>
-            </div>
-        </form>
+      <form action="" method="get" class="form-example">
+        <div class="field">
+          <label for="name">Fill in the field to filter Breeds: </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            onChange={handleChange}
+            required
+          />
+        </div>
+      </form>
     </SearchContainer>
   );
 }

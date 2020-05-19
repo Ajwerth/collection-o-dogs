@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 
+const initialState = {
+  values: null,
+};
 
 export const useForm = (callback) => {
-
-  const [values, setValues] = useState({});
+  const [values, setValues] = useState(initialState);
 
   const handleSubmit = (event) => {
     if (event) event.preventDefault();
@@ -12,14 +14,17 @@ export const useForm = (callback) => {
 
   const handleChange = (event) => {
     event.persist();
-    setValues(values => ({ ...values, [event.target.name]: event.target.value }));
+    setValues((values) => ({
+      ...values,
+      [event.target.name]: event.target.value,
+    }));
   };
 
   return {
     handleChange,
     handleSubmit,
     values,
-  }
+  };
 };
 
 export const useFetch = (url, options) => {
@@ -40,6 +45,6 @@ export const useFetch = (url, options) => {
       }
     };
     fetchData();
-  }, [options, url]);
+  }, []);
   return { response, isLoading, error };
 };
