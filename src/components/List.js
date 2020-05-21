@@ -28,26 +28,37 @@ function List(props) {
 
   const filteredBreeds = breeds.filter((breed) => breed.includes(values.name));
 
-  const BreedsDisplay = () =>
-    filteredBreeds.map((breed) => {
-      return (
-        <div className="row">
-          <p>{breed}</p>
-          <input
-            type="button"
-            onClick={handleClick}
-            value="Add to Collection"
-          />
-        </div>
-      );
-    });
+  const BreedsDisplay =
+    values.name === "" || null
+      ? breeds.map((breed) => {
+          return (
+            <div className="row">
+              <p>{breed}</p>
+              <input
+                type="button"
+                onClick={handleClick}
+                value="Add to Collection"
+              />
+            </div>
+          );
+        })
+      : filteredBreeds.map((breed) => {
+          return (
+            <div className="row">
+              <p>{breed}</p>
+              <input
+                type="button"
+                onClick={handleClick}
+                value="Add to Collection"
+              />
+            </div>
+          );
+        });
 
   return (
     <>
-      <Search handleChange={handleChange} handleSubmit={handleSubmit} />
-      <ListContainer>
-        <BreedsDisplay />
-      </ListContainer>
+      <Search handleChange={handleChange} />
+      <ListContainer>{BreedsDisplay}</ListContainer>
     </>
   );
 }

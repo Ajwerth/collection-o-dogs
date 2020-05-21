@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 
-const initialState = {
-  values: null,
-};
-
+// Custom form hook
 export const useForm = (callback) => {
-  const [values, setValues] = useState(initialState);
+  const [values, setValues] = useState({ name: "" });
 
   const handleSubmit = (event) => {
     if (event) event.preventDefault();
@@ -27,6 +24,7 @@ export const useForm = (callback) => {
   };
 };
 
+// Custom fetch hook
 export const useFetch = (url, options) => {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
