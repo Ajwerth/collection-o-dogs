@@ -1,5 +1,4 @@
 import React from "react";
-import { useForm } from "../customHooks";
 import styled from "styled-components";
 
 const SearchContainer = styled.div`
@@ -24,12 +23,12 @@ const SearchContainer = styled.div`
 `;
 
 function Search(props) {
-  const { handleChange, handleSubmit } = props;
+  const { handleChange } = props;
   return (
     <SearchContainer>
-      <form action="" method="get" class="form-example">
-        <div class="field">
-          <label for="name">Fill in the field to filter Breeds: </label>
+      <form action="" method="get">
+        <div className="field">
+          <label htmlFor="name">Fill in the field to filter Breeds: </label>
           <input
             type="text"
             name="name"

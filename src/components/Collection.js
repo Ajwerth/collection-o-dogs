@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const CollectionContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-top: 2rem;
 
   h2 {

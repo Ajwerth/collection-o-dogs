@@ -6,16 +6,18 @@ import Card from "./components/Card";
 import "./App.css";
 
 function App() {
-  const initialArr = [];
-  const [collection, setCollection] = useState(initialArr);
+  const [collection, addToCollection] = useState([]);
+
+  const testCollection = ["Golden", "PitBull"];
 
   const Cards = () =>
-    collection.map((item) => {
-      return <Card breed={item.name} />;
+    collection.map((item, index) => {
+      return <Card breed={item} key={index} />;
     });
 
-  const handleClick = (target) => {
-    setCollection((collection) => collection.concat(target));
+  const handleClick = (e) => {
+    e.persist();
+    addToCollection((collection) => collection.concat(e.target.value));
   };
 
   return (
@@ -23,7 +25,7 @@ function App() {
       <Header />
       <List handleClick={handleClick} />
       <Collection>
-        <Card />
+        <Cards />
       </Collection>
     </div>
   );

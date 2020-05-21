@@ -4,13 +4,21 @@ import { useFetch, useForm } from "../customHooks";
 import Search from "./Search";
 
 const ListContainer = styled.div`
+  background-color: #eaeaea;
+  padding: 10px;
+  margin-top: 10px;
   height: 200px;
   overflow-y: scroll;
 
-  .row {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
+  .breedButton {
+    padding: 5px 10px;
+    background-color: #8459ca;
+    margin: 5px;
+    border-radius: 4px;
+    border: 2px solid #000;
+    color: white;
+    font-size: 15px;
+    font-family: "poppins", sans-serif;
   }
 `;
 
@@ -30,28 +38,26 @@ function List(props) {
 
   const BreedsDisplay =
     values.name === "" || null
-      ? breeds.map((breed) => {
+      ? breeds.map((breed, index) => {
           return (
-            <div className="row">
-              <p>{breed}</p>
-              <input
-                type="button"
-                onClick={handleClick}
-                value="Add to Collection"
-              />
-            </div>
+            <input
+              className="breedButton"
+              key={index}
+              type="button"
+              onClick={handleClick}
+              value={breed}
+            />
           );
         })
-      : filteredBreeds.map((breed) => {
+      : filteredBreeds.map((breed, index) => {
           return (
-            <div className="row">
-              <p>{breed}</p>
-              <input
-                type="button"
-                onClick={handleClick}
-                value="Add to Collection"
-              />
-            </div>
+            <input
+              className="breedButton"
+              key={index}
+              type="button"
+              onClick={handleClick}
+              value={breed}
+            />
           );
         });
 
