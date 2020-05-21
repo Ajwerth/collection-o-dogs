@@ -19,12 +19,17 @@ const ListContainer = styled.div`
     color: white;
     font-size: 15px;
     font-family: "poppins", sans-serif;
+
+    &:hover {
+      background-color: #66459c;
+      cursor: pointer;
+    }
   }
 `;
 
 function List(props) {
-  const { values, handleChange } = useForm();
   const { handleClick } = props;
+  const { values, handleChange } = useForm();
 
   const res = useFetch("https://dog.ceo/api/breeds/list/all", {});
 

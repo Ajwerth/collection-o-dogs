@@ -27,20 +27,3 @@ img {
 .App {
   margin: 5%;
 }
-
-button {
-  background: #693db1;
-  border: 2px solid #693db1;
-  color: #fff;
-  padding: 5px 10px;
-  font-size: 1rem;
-  border-radius: 4px;
-  margin-left: 5px;
-}
-
-button:hover {
-  background: #fff;
-  color: #693db1;
-  border: 2px solid #693db1;
-  cursor: pointer;
-}
