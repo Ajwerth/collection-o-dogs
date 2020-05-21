@@ -10,7 +10,7 @@ There is still a lot that could be done to this app, but hopefully this gives yo
 
 I spent about 3-4 hour on this app, it isn't 100% complete, but I feel I have gotten it to a good point in that amount of time. If I was going to spend more time on this app there are a few thigns I would tackle.
 
-- First I would also creat a delete button on breeds that have been added to the collection.
+- First I would create a delete button on breeds that have been added to the collection.
 
 - I would also like to figure out how to stop the components from re-rendering everything you add a new dog to the collection.
 
