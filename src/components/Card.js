@@ -31,7 +31,7 @@ function Card(props) {
   return (
     <CardContainer>
       <h3>{breed}</h3>
-      <img src={imageUrl} />
+      <img src={imageUrl} alt={"picture of a " + breed} />
     </CardContainer>
   );
 }

@@ -8,8 +8,6 @@ import "./App.css";
 function App() {
   const [collection, addToCollection] = useState([]);
 
-  const testCollection = ["Golden", "PitBull"];
-
   const Cards = () =>
     collection.map((item, index) => {
       return <Card breed={item} key={index} />;

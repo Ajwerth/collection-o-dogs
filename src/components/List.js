@@ -23,7 +23,7 @@ const ListContainer = styled.div`
 `;
 
 function List(props) {
-  const { values, handleChange, handleSubmit } = useForm();
+  const { values, handleChange } = useForm();
   const { handleClick } = props;
 
   const res = useFetch("https://dog.ceo/api/breeds/list/all", {});
